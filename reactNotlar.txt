@@ -1,0 +1,36 @@
+gradle-wrapper.properties change file;
+distributionUrl=https\://services.gradle.org/distributions/gradle-3.4.1-all.zip
+
+ext install react-native --> react native tools on vs code
+
+(in project directory) mkdir android/app/src/main/assets
+
+react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+
+/*
+Android studio terminal adb;
+
+J:\ReactGuideWorkspace\firstReactNativeProject\android>adb devices -l
+List of devices attached
+emulator-5554          offline
+02157df269776d0e       device product:zerofltexx model:SM_G920F device:zeroflte
+
+
+J:\ReactGuideWorkspace\firstReactNativeProject\android>adb -s 02157df269776d0e shell
+shell@zeroflte:/ $ reverse tcp:8081 tcp:8081
+/system/bin/sh: reverse: not found
+127|shell@zeroflte:/ $ exit
+
+J:\ReactGuideWorkspace\firstReactNativeProject\android>adb -s 02157df269776d0e reverse tcp:8081 tcp:
+8081
+
+*/
+
+react-native run-android
+
+https://api.myjson.com/bins/12rdmb
+/*React Dom*/
+npm init
+npm install --save react react-dom
+babel script.js --presets react
+echo '{ "presets": ["react"] }' > .babelrc
